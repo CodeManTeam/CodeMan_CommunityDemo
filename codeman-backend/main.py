@@ -249,7 +249,7 @@ async def anti_scraping_middleware(request: Request, call_next):
         origin = request.headers.get("origin", "")
         # Allow localhost for dev, but in prod verify domain
         # Also allow 192.168.x.x for LAN access
-        allowed_hosts = ["localhost", "127.0.0.1", "codeman.community", "192.168.", "192.227.152.240", "bettermao.cfd"]
+        allowed_hosts = ["localhost", "127.0.0.1", "codeman.community", "192.168.", "your-domain.com", "your-domain.com"]
         
         # Skip check if no referer/origin (could be mobile app, but here we are strict web)
         # If strict:

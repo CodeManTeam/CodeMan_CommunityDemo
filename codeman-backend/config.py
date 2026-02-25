@@ -18,4 +18,4 @@ DATABASE_URL = "database.db"
 
 # --- Anti-Scraping ---
 BLOCKED_USER_AGENTS = ["python-requests", "curl", "wget", "scrapy", "httpie"]
-ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173", "http://192.227.152.240:8080"]
+ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173", "http://your-domain.com:8080"]

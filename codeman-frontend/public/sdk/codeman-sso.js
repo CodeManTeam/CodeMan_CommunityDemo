@@ -4,14 +4,14 @@
 
     // Configuration
     // In production, this should point to your real domain
-    // const AUTH_BASE_URL = "https://codeman.bettermao.cfd"; 
+    // const AUTH_BASE_URL = "https://your-domain.com"; 
     const AUTH_BASE_URL = window.location.origin.includes('localhost') 
         ? "http://localhost:5173" 
-        : "https://codeman.bettermao.cfd";
+        : "https://your-domain.com";
 
     const API_BASE_URL = window.location.origin.includes('localhost')
         ? "http://localhost:8000/api"
-        : "https://codeman.bettermao.cfd/api";
+        : "https://your-domain.com/api";
 
     /**
      * CodeMan SSO SDK
