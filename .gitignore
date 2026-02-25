@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.venv/
+venv/
+ENV/
+env/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Frontend build
+codeman-frontend/dist/
+codeman-frontend/node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Keys and Secrets
+*.pem
+*.key
+credential_key.key
+private_key.pem
+
+# Logs
+*.log
+history.txt # Added to ignore history.txt
+
+# Backups
+backup_*/
+backups/ # Added to ignore the backups directory
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+*.zip # Changed from specific zip to general *.zip
+docker-compose.yml.tmp
+codemao-api-master/ # Added to ignore codemao-api-master directory

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+peewee
+httpx
+markdown
+bleach
+cryptography
+PyJWT
+slowapi
+nh3
+python-multipart

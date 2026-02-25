@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./codeman-backend
+    container_name: codeman-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./codeman-backend:/app
+      # If you want to persist data in a volume instead of local bind mount:
+      # - backend_data:/app/data
+    environment:
+      - DB_PATH=/app/database.db
+    restart: always
+
+  frontend:
+    build: ./codeman-frontend
+    container_name: codeman-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  backend_data:
