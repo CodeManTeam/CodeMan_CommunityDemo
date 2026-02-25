@@ -1,6 +1,6 @@
 # Server 运维经验与维护指南
 
-本文档记录了 CodeMan Community 服务器（IP: 192.227.152.240）的部署架构、配置细节及常见问题处理方案，供后续运维参考。
+本文档记录了 CodeMan Community 服务器的部署架构、配置细节及常见问题处理方案，供后续运维参考。
 
 ## 1. 系统架构概览
 
@@ -19,7 +19,6 @@
 | **RSA 私钥** | `/opt/codeman/codeman-backend/private_key.pem` | **[重要]** 登录加密私钥。必须持久化，否则重启会导致旧用户/前端缓存公钥失效。 |
 | **后端代码** | `/opt/codeman/codeman-backend/` | Python 源码 |
 | **前端源码** | `/opt/codeman/codeman-frontend/` | Vue 源码 (构建时使用) |
-| **遗留站点** | `/var/www/html` | 旧的 php-proxy-app (已停用 httpd) |
 
 ## 3. 常用运维命令
 
@@ -97,7 +96,7 @@ docker logs -f --tail 50 codeman-frontend
 
 ## 6. CDN 接入指南
 
-*   **源站 IP**: `192.227.152.240`
+*   **源站 IP**: `[Server IP]`
 *   **源站端口**: `80` (HTTP)
 *   **回源 Host**: 建议设置为您的域名 (如 `codeman.community`)，并在后端 `main.py` 的 `allowed_hosts` 中添加该域名，防止被 403 拦截。
 
